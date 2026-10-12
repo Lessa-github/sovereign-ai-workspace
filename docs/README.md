@@ -8,7 +8,7 @@
 
 ---
 
-## 📋 Platform Overview
+## 📋 Platform Overview :id=platform-overview
 
 This repository documents an enterprise-grade, self-hosted Artificial Intelligence workspace designed around **data sovereignty, zero external telemetry, and multi-provider economic resilience**.
 
@@ -22,7 +22,7 @@ Operating inside dedicated Debian 12 LXC containers on Proxmox VE, the infrastru
 
 ---
 
-## 📐 Multi-Provider Gateway Architecture
+## 📐 Multi-Provider Gateway Architecture :id=gateway-architecture
 
 ```mermaid
 flowchart TD
@@ -55,7 +55,7 @@ flowchart TD
 
 ---
 
-## 🔀 The 7 Master Combos & Failover Resilience
+## 🔀 The 7 Master Combos & Failover Resilience :id=master-combos
 
 To guarantee 24/7 autonomous agent execution without relying on corporate credit cards or unexpected billing surprises, OmniRoute implements a sliding-window rate limit governor:
 1. **RPM (Requests Per Minute) Tracking:** Prevents provider burst throttling.
@@ -64,7 +64,7 @@ To guarantee 24/7 autonomous agent execution without relying on corporate credit
 
 ---
 
-## ✂️ Caveman Prompt Compression (-60% Tokens)
+## ✂️ Caveman Prompt Compression (-60% Tokens) :id=caveman-compression
 
 Context window saturation is the primary cause of latency and economic overhead in agentic workflows. The **Caveman Engine** transforms verbose instructions into dense, high-signal technical directives:
 
@@ -86,7 +86,7 @@ flowchart LR
 
 ---
 
-## 🔒 Pre-Inference PII Masking
+## 🔒 Pre-Inference PII Masking :id=pii-masking
 
 The PII Masking Middleware enforces Zero-Knowledge governance at the inference gateway:
 * **API Keys & Cryptographic Tokens:** Strips `ghp_*`, `sk-*`, `Bearer *` into `${TOKEN_REDACTED}` placeholders.
@@ -95,7 +95,7 @@ The PII Masking Middleware enforces Zero-Knowledge governance at the inference g
 
 ---
 
-## 🤖 Hermes Agent & SearXNG Private Search
+## 🤖 Hermes Agent & SearXNG Private Search :id=hermes-searxng
 
 The **CT 115 (`ai-workspace`)** container operates the **Hermes Autonomous Agent**:
 * **Zero Telemetry Search:** Queries a local **SearXNG** instance aggregating Google, DuckDuckGo, Bing, and GitHub without storing query logs or user IP traces.
@@ -103,7 +103,7 @@ The **CT 115 (`ai-workspace`)** container operates the **Hermes Autonomous Agent
 
 ---
 
-## 🛠️ omniroute-bench CLI Tool
+## 🛠️ omniroute-bench CLI Tool :id=omniroute-bench
 
 ```text
 Usage: omniroute-bench.py [OPTIONS]
@@ -118,9 +118,10 @@ Options:
 
 ---
 
-## 🔗 Connected Repositories & Live Portals
+## 🔗 Connected Portals & Repositories :id=connected-portals
 
 * 🏛️ **[Homelab Zero-Trust](https://lessa-github.github.io/homelab-zero-trust-infra/)** — Network Topology, Proxmox VE & SRE Hardening.
 * 🛡️ **[Cyber DFIR Training Lab](https://lessa-github.github.io/cyber-dfir-training-lab/)** — Digital Forensics, Velociraptor (67MB RAM) & Purple Teaming.
 * ⚰️ **[Homelab Graveyard & Lessons Learned](https://lessa-github.github.io/homelab-graveyard-and-lessons-learned/)** — SRE Post-Mortems on Decommissioned Stacks.
+* 🌐 **[Gabriel Lessa Portfolio](https://lessa-github.github.io/gabriel-portfolio/)** — Cybersecurity Risk Management & Homelab Engineering.
 * 🔒 **[Zero-Knowledge Secret Framework](https://github.com/Lessa-github/zero-knowledge-secret-framework)** — Ephemeral Memory Secret Injection Engine (Private).

@@ -1,10 +1,10 @@
-# 🛠️ omniroute-bench: CLI de Benchmarking
+# 🛠️ omniroute-bench: AI Gateway Benchmarking CLI
 
-Utilitário de linha de comando para medir o impacto de algoritmos de compressão e tempos de resposta de provedores de IA.
+Command-line utility designed to profile the token reduction impact of syntactic compression algorithms and round-trip latencies across AI inference providers.
 
 ---
 
-## 💻 Interface de Linha de Comando (`--help`)
+## 💻 Command Line Interface (`--help`)
 
 ```text
 Usage: omniroute-bench.py [OPTIONS]

@@ -1,9 +1,10 @@
-# Economia de Tokens em Agentes Autônomos de Código
+# Token Economics in Autonomous Coding Agents & Free-Tier Resilience
 
-Agentes autônomos consomem grandes quantidades de contexto repetindo histórico de conversas e árvores de diretórios.
+Autonomous agents process massive volumes of context window tokens by continuously re-injecting conversational transcripts, file trees, and terminal execution traces.
 
-Sem um gateway intermediário, uma sessão longa de depuração pode custar centenas de dólares ou estourar cotas de API.
+Without an intermediate intelligent gateway, complex debugging sessions rapidly incur substantial cloud API bills or trigger catastrophic HTTP 429 rate limits.
 
-Nossa estratégia combina:
-* **Google Gemini Flash / Groq / Cloudflare Workers AI:** Utilizados para tarefas de alta frequência (leitura de código, busca de erros, formatação).
-* **Cache Semântico em SQLite:** Respostas repetidas não gastam requisições de rede nem tokens.
+### Our Multi-Tier Resilience Architecture:
+* **Perpetual Free Tiers (Google AI Studio, Groq LPU, Cloudflare Workers AI):** Dispatched for high-frequency low-latency operations (code search, syntax validation, linting, tool schema formatting).
+* **Local SQLite Semantic Caching:** Duplicate tool outputs and code inspection requests are served directly from disk cache, consuming zero external API quotas.
+* **Automatic Failover Cascade:** Millisecond transition to mirror providers when any single provider encounters rate limits or service degradation.

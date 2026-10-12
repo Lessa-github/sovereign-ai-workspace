@@ -1,12 +1,12 @@
-# 🤖 Agente Autônomo Hermes & Busca SearXNG
+# 🤖 Hermes Autonomous Agent & Private SearXNG Meta-Search
 
-O container **CT 115 (`ai-workspace`)** hospeda o ambiente de execução do **Hermes Agent**, operando sobre um contêiner Debian 12 com isolamento de privilégios.
+Container **CT 115 (`ai-workspace`)** hosts the runtime environment for the **Hermes Autonomous Agent**, operating within an unprivileged Debian 12 LXC environment with strict capability restrictions.
 
 ---
 
-## 🔍 Busca na Web Privada com SearXNG
+## 🔍 Zero-Telemetry Web Search via Self-Hosted SearXNG
 
-Diferente de agentes que utilizam motores de busca comerciais que indexam as consultas e realizam telemetria sobre as intenções de busca do pesquisador, nosso agente consulta exclusivamente uma instância local do **SearXNG**:
-* **Meta-search Agregador:** Consulta Google, DuckDuckGo, Bing, Wikipedia e GitHub simultaneamente.
-* **Zero Logs:** A instância não armazena cookies, histórico nem endereços IP de origem.
-* **Formato JSON Nativo:** Retorna respostas em formato estruturado pronto para consumo pelo modelo.
+Unlike commercial AI agents that query proprietary search engines which log search intentions, profile user queries, and inject tracker cookies, our autonomous agent routes all web research exclusively through a local instance of **SearXNG**:
+* **Aggregated Meta-Search Engine:** Queries Google, DuckDuckGo, Bing, Wikipedia, and GitHub concurrently in the background.
+* **Zero Logging Guarantee:** The engine retains zero cookies, search histories, or originating IP addresses.
+* **Native JSON API Delivery:** Returns sanitized, structured markdown results directly into the agent's MCP tool context without scraping overhead.
