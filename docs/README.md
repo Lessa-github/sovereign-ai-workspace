@@ -1,7 +1,7 @@
 # 🧠 Sovereign AI Workspace & Multi-Provider Gateway
 
 > **Author:** Gabriel Santa Rosa Lessa  
-> **Timeline:** 2025 – Present (School Research 2025 - Aug/2026 · Intensive Hands-on Aug/2026 - Present)  
+> **Timeline:** 2025 – Present (College Studies 2025 - Aug/2026 · Intensive Hands-on Aug/2026 - Present)  
 > **Core Gateway:** OmniRoute AI Gateway (CT 114 / Port 20128)  
 > **Autonomous Agent:** Hermes Agent (Debian 12 LXC · CT 115) with Local SearXNG Meta-Search  
 > **Token Optimization:** Caveman Compression Engine (-60% Context Window Overhead)
