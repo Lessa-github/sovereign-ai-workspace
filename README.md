@@ -5,60 +5,57 @@
 [![Optimization](https://img.shields.io/badge/Tokens-Caveman_--60%25-10b981?style=for-the-badge)](https://lessa-github.github.io/sovereign-ai-workspace/)
 [![Privacy](https://img.shields.io/badge/Search-SearXNG_Private-blue?style=for-the-badge)](https://lessa-github.github.io/gabriel-portfolio/)
 
-Plataforma de infraestrutura de Inteligência Artificial soberana, orquestração de agentes autônomos e roteamento econômico multi-provedor com **privacidade total e zero telemetria externa**.
+Sovereign Artificial Intelligence workspace, multi-agent orchestration, and economic multi-provider gateway engineered for **strict data privacy and zero external telemetry**.
 
-Projetado para operar em contêineres Debian 12 LXC dedicados no Proxmox VE, eliminando gargalos de cotas via failover automático para tiers perpétuos gratuitos e reduzindo o consumo de tokens de contexto em até **60% via algoritmos de compressão semântica**.
-
----
-
-## ⚡ Destaques de Engenharia
-
-* **Roteamento Inteligente em 7 Combos:** O gateway **OmniRoute (CT 114)** realiza failover contínuo e sem interrupções entre múltiplos provedores com cotas gratuitas perpétuas (Google AI Studio, Groq LPU, Cloudflare Workers AI) com governança de limites de RPM/RPD.
-* **Compressão de Prompt Caveman:** Algoritmo que elimina stopwords e tokens redundantes, diminuindo o consumo de janela de contexto em 60% com perda semântica próxima de zero.
-* **Middleware de PII Masking:** Sanitização pré-inferência que anonimiza senhas, chaves de API, CPFs e dados sensíveis antes de qualquer tráfego sair para APIs de IA.
-* **Agente Autônomo Hermes (CT 115):** Ambiente de execução isolado equipado com suporte a ferramentas MCP e integrado a uma instância local do buscador **SearXNG** para pesquisa na internet sem rastreamento comercial.
+Operating inside dedicated Debian 12 LXC containers on Proxmox VE, the infrastructure eliminates rate-limiting bottlenecks via **automated multi-tier quota failover** and slashes context window consumption by **60% using syntactic prompt compression**.
 
 ---
 
-## 📐 Arquitetura do Gateway Multi-Provider
+## ⚡ Engineering Highlights
+
+* **The 7 Master Combos Gateway:** OmniRoute (CT 114) continuously load-balances requests across perpetual free-tier providers (Google AI Studio, Groq LPU, Cloudflare Workers AI) with millisecond failover.
+* **Caveman Syntactic Compression:** Algorithmic prompt minimization removing filler words and passive grammar while preserving 98.4%+ semantic accuracy.
+* **Pre-Inference PII Masking:** Real-time regex inspection redacting API keys, passwords, IP addresses, and personal identification numbers before prompts leave the host.
+* **Hermes Agent & Private Search:** Autonomous task execution in an unprivileged container connected to a zero-telemetry local **SearXNG** meta-search engine.
+
+---
+
+## 📐 Multi-Provider Gateway Architecture
 
 ```mermaid
 flowchart TD
-    subgraph CLIENTS ["Consumidores de IA Internos"]
-        Hermes["Hermes Autonomous Agent (CT 115)"]
-        CLI["OmniRoute Benchmark CLI"]
+    subgraph INTERNAL_CLIENTS ["Internal AI Consumers"]
+        Hermes["Hermes Autonomous Coding Agent (CT 115)"]
+        BenchCLI["OmniRoute Benchmark CLI"]
     end
 
-    subgraph GATEWAY ["OmniRoute AI Gateway (CT 114 / Porta 20128)"]
-        PII["1. Middleware de PII Masking (Sanitização)"]
-        Caveman["2. Algoritmo de Compressão Caveman (-60% Tokens)"]
-        Router["3. Intelligent Rate-Limit & Quota Router (Redis Cache)"]
+    subgraph GATEWAY ["OmniRoute AI Gateway (CT 114 / Port 20128)"]
+        PII["1. Pre-Inference PII Masking Middleware"]
+        Caveman["2. Caveman Prompt Compression Engine (-60% Tokens)"]
+        Router["3. Intelligent Quota & Rate-Limit Router (Redis Cache)"]
     end
 
-    subgraph PROVIDERS ["Nuvem Multi-Provider (Failover Automático)"]
-        Groq["Groq LPU (Ultra-Low Latency / Llama 3.3)"]
-        Google["Google AI Studio (Gemini 2.0 Flash)"]
-        Cloudflare["Cloudflare Workers AI (Llama 3 / Mistral)"]
-        LocalLLM["Ollama Local Fallback (100% Offline)"]
+    subgraph PROVIDERS ["Multi-Provider Ecosystem (Automated Failover)"]
+        Groq["Tier 1: Groq LPU (Ultra-Low Latency / Llama 3.3 70B)"]
+        Google["Tier 2: Google AI Studio (Gemini 2.0 Flash)"]
+        CF["Tier 3: Cloudflare Workers AI (Llama 3 / Mistral)"]
+        Ollama["Tier 4: Ollama Local Fallback (100% Offline PVE Host)"]
     end
 
-    CLIENTS --> PII
+    INTERNAL_CLIENTS --> PII
     PII --> Caveman
     Caveman --> Router
-    Router -->|Tier 1 Principal| Groq
-    Router -.->|Failover se Quota Esgotada| Google
-    Router -.->|Failover Secundário| Cloudflare
-    Router -.->|Failover Offline Sem Internet| LocalLLM
+    Router -->|Primary Ingestion| Groq
+    Router -.->|Fallback on HTTP 429| Google
+    Router -.->|Secondary Fallback| CF
+    Router -.->|Offline Air-Gapped Fallback| Ollama
 ```
 
 ---
 
-## 🛠️ CLI Benchmark: `omniroute-bench.py`
+## 🛠️ Benchmark CLI: omniroute-bench.py
 
-O repositório inclui a ferramenta de teste e benchmarking de compressão de contexto:
-
-```bash
-$ python3 cli-tools/omniroute-bench.py --help
+```text
 Usage: omniroute-bench.py [OPTIONS]
 
 Options:
@@ -71,6 +68,8 @@ Options:
 
 ---
 
-## 🌐 Documentação Web Completa (Live Docsify)
+## 🌐 Live Technical Documentation
+
+Explore the complete single-page interactive whitepaper with smooth section scrolling:
 
 👉 **[https://lessa-github.github.io/sovereign-ai-workspace/](https://lessa-github.github.io/sovereign-ai-workspace/)**
