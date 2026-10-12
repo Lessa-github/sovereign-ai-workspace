@@ -1,0 +1,6 @@
+* [Visão Geral](README.md)
+* [Gateway Multi-Provider (OmniRoute)](multi-provider-gateway.md)
+* [Compressão Caveman (-60% Tokens)](caveman-compression.md)
+* [Middleware de PII Masking](pii-masking.md)
+* [Agente Hermes & SearXNG Privado](hermes-agent-searxng.md)
+* [CLI de Benchmarking](benchmarking-cli.md)
