@@ -36,10 +36,10 @@ flowchart TD
     end
 
     subgraph PROVIDERS ["Multi-Provider Ecosystem (Automated Failover)"]
-        Groq["Tier 1: Groq LPU (Ultra-Low Latency / Llama 3.3 70B)"]
-        Google["Tier 2: Google AI Studio (Gemini 2.0 Flash)"]
-        CF["Tier 3: Cloudflare Workers AI (Llama 3 / Mistral)"]
-        Ollama["Tier 4: Ollama Local Fallback (100% Offline PVE Host)"]
+        Groq["Tier 1: Groq LPU<br>(Ultra-Low Latency / Llama 3.3 70B)"]
+        Google["Tier 2: Google AI Studio<br>(Gemini 2.0 Flash)"]
+        CF["Tier 3: Cloudflare Workers AI<br>(Llama 3 / Mistral)"]
+        Ollama["Tier 4: Ollama Local Fallback<br>(100% Offline PVE Host)"]
     end
 
     INTERNAL_CLIENTS --> PII
